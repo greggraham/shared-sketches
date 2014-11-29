@@ -11,4 +11,6 @@ for (int y = 0; y < height; y += iheight) {
     image(img, x, y, iwidth, iheight);
   }
 }
+save("cover-photo.jpg");
+
 
