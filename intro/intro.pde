@@ -1,6 +1,8 @@
 Scene[] scenes = {
     new IdleScene(),
     new TitleScene(),
+    new S01(),
+    new S02(),
   };
 
 int sceneNum = 0;

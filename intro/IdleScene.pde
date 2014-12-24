@@ -15,6 +15,11 @@ class IdleScene extends Scene {
   PVector velocity;
   float r = 6;
   float speed = 7.0;
+  
+  color bgColor = color(0, 0, 20);
+  color bgFade = color(0, 0, 20, 40);
+  color groundColor = color(100, 70, 50);
+  color ballColor = color(255, 224, 0);
 
   void setup() {
     base1 = new PVector(0, height-150);
@@ -22,8 +27,8 @@ class IdleScene extends Scene {
   }
   
   void start() {
-    background(0);
-    fill(128);
+    background(bgColor);
+    fill(groundColor);
     createGround();
 
     // start ellipse at middle top of screen
@@ -36,12 +41,12 @@ class IdleScene extends Scene {
 
   void draw() {
     // draw background
-    fill(0, 12);
+    fill(bgFade);
     noStroke();
     rect(0, 0, width, height);
 
     // draw base
-    fill(200);
+    fill(groundColor);
     quad(base1.x, base1.y, base2.x, base2.y, base2.x, height, 0, height);
 
     // calculate base top normal
@@ -51,7 +56,7 @@ class IdleScene extends Scene {
 
     // draw ellipse
     noStroke();
-    fill(255);
+    fill(ballColor);
     ellipse(position.x, position.y, r*2, r*2);
 
     // move elipse
