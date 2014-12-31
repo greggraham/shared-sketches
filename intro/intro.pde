@@ -3,6 +3,7 @@ Scene[] scenes = {
     new TitleScene(),
     new S01(),
     new S02(),
+    new S03(),
   };
 
 int sceneNum = 0;
